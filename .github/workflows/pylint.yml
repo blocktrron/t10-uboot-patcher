@@ -1,0 +1,7 @@
+name: lint
+on: [push, pull_request]
+jobs:
+  pylint:
+    runs-on: ubuntu-latest
+    steps:
+      - run: pylint --fail-under 10 patcher.py
