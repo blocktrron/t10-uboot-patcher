@@ -4,5 +4,6 @@ jobs:
   pylint:
     runs-on: ubuntu-latest
     steps:
-      - run: sudo apt install pylint
+      - run: sudo apt-get -y install pylint
+      - run: ls -l
       - run: pylint --fail-under 10 patcher.py
